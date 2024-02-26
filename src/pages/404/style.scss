@@ -1,0 +1,116 @@
+// .pageNotFound {
+//     height: 700px;
+//     padding-top: 200px;
+//     .contentWrapper {
+//         text-align: center;
+//         color: var(--black-light);
+//         display: flex;
+//         flex-direction: column;
+//         .bigText {
+//             font-size: 150px;
+//             font-weight: 700;
+//         }
+//         .smallText {
+//             font-size: 44px;
+//         }
+//     }
+// }
+
+
+@import "../../mixins.scss";
+
+
+.custom-container {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 70%);
+    max-width: 400px; // This should be translated to a specific px value as SCSS doesn't understand Tailwind's `md`
+    padding: 1rem;
+    border-radius: 0.375rem; // Approximation of rounded-md
+    color: black;
+    background-color: white;
+    margin-bottom: 500px;
+    height: 400px;
+
+    .title,
+    .subtitle,
+    .footer-text {
+        color: #1e0e4b;
+        text-align: center;
+    }
+
+    .title {
+        font-size: 1.25rem; // 2xl
+        font-weight: bold;
+        margin-bottom: 0.5rem; // mb-2
+
+        .highlight {
+            color: #7747ff;
+        }
+    }
+
+    .subtitle {
+        font-size: 0.875rem; // sm
+        font-weight: normal;
+        margin-bottom: 1rem; // mb-4
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem; // Tailwind's `gap-3` approximation
+
+        .input-group {
+            position: relative;
+            display: block;
+
+            .label {
+                display: block;
+                color: #4b5563; // gray-600
+                font-size: 0.875rem; // sm
+                font-weight: normal;
+                margin-bottom: 0.5rem;
+            }
+
+            .input {
+                width: 100%;
+                height: 2.75rem; // h-11 approximation
+                padding: 0.6875rem; // Approximation of p-[11px]
+                font-size: 0.875rem; // sm
+                color: black;
+                background-color: white;
+                border: 1px solid #e5e7eb; // border-gray-200
+                border-radius: 0.375rem; // rounded approximation
+                outline: 0;
+
+
+            }
+        }
+
+        .forgot-password {
+            color: #7747ff;
+            font-size: 0.875rem; // sm
+        }
+
+        .submit-button {
+            background-color: #7747ff;
+            color: white;
+            padding: 0.5rem 1.5rem; // px-6 py-2
+            font-size: 0.875rem; // sm
+            font-weight: normal;
+            border-radius: 0.375rem; // rounded
+            margin: auto;
+            width: max-content;
+        }
+    }
+
+    .footer-text {
+        margin-top: 1.6rem;
+        font-size: 0.875rem; // sm
+
+        .sign-up-link {
+            color: #7747ff;
+        }
+    }
+}
